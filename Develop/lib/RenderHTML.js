@@ -49,8 +49,11 @@ function  managerCard (manager) {
 const RenderHTML = (data) => {
 
   for (let i = 0; i < data.length; i++) {
-    const element = data[i];
-    console.log(element)
+    const employee = data[i];
+    console.log(employee)
+
+    const role = employee.roleAssign()
+    console.log(role)
     
   }
 
@@ -60,8 +63,6 @@ const RenderHTML = (data) => {
     return
     // teamArray = [];
 
-    // for (let i = 0; i < teamArray.length; i++) {
-    //     const employee = data[i]
     //     const role = employee.roleAssign()
 
     //     if(role === 'Manager'){
