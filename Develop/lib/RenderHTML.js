@@ -56,6 +56,10 @@ const RenderHTML = (data) => {
     if (role === 'Manager'){
       const renderedManager = managerCard(employee)
     }
+
+    if(role === 'Engineer'){
+      const renderedEngineer = engineerCard(employee)
+    }
   }
 
 
@@ -67,10 +71,8 @@ const RenderHTML = (data) => {
     //         teamArray.push(renderedManager)
     
 
-    //     if(role === 'Engineer'){
-    //         const renderedEngineer = engineerCard(employee)
     //         teamArray.push(renderedEngineer)
-    //     }
+  
 
     //     if(role === 'Intern'){
     //         const renderedIntern = internCard(employee)
