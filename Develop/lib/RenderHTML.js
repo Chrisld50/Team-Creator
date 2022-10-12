@@ -50,11 +50,12 @@ const RenderHTML = (data) => {
 
   for (let i = 0; i < data.length; i++) {
     const employee = data[i];
-    console.log(employee)
 
     const role = employee.roleAssign()
-    console.log(role)
     
+    if (role === 'Manager'){
+      const renderedManager = managerCard(employee)
+    }
   }
 
 
@@ -63,12 +64,8 @@ const RenderHTML = (data) => {
     return
     // teamArray = [];
 
-    //     const role = employee.roleAssign()
-
-    //     if(role === 'Manager'){
-    //         const renderedManager = managerCard(employee)
     //         teamArray.push(renderedManager)
-    //     }
+    
 
     //     if(role === 'Engineer'){
     //         const renderedEngineer = engineerCard(employee)
