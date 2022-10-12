@@ -71,14 +71,18 @@ const RenderHTML = (data) => {
   }
 
 
+  const allCards = teamArray.join('')
 
-    return
+
+
+
+  return
 
 
         
 
   
-    // const allCards = teamArray.join('')
+
     // const finalPage = contentPage(allCards)
     // return finalPage;
 }
