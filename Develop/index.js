@@ -50,10 +50,10 @@ function init(){
                     message: 'what is your filename?'
                 },
             ])
-            .then(() => {
-                const htmlContent = RenderHTML(data)
-                fs.writeFile(htmlContent, RenderHTML(teamMembers), (err) =>
-                err? console.log(err) : console.log('README created!')) 
+            .then((data) => {
+                const fileName = `${data.filename}.html`
+                fs.writeFile(fileName, RenderHTML(teamMembers), (err) =>
+                err? console.log(err) : console.log('HTML created!')) 
         })
       }
     }
