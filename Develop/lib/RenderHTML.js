@@ -47,6 +47,7 @@ function  managerCard (manager) {
 }
 
 const RenderHTML = (data) => {
+  let teamArray = [] 
 
   for (let i = 0; i < data.length; i++) {
     const employee = data[i];
@@ -55,36 +56,28 @@ const RenderHTML = (data) => {
     
     if (role === 'Manager'){
       const renderedManager = managerCard(employee)
+      teamArray.push(renderedManager)
     }
 
     if(role === 'Engineer'){
       const renderedEngineer = engineerCard(employee)
+      teamArray.push(renderedEngineer)
     }
 
     if (role === 'Intern'){
       const renderedIntern = internCard(employee)
+      teamArray.push(renderedIntern)
     }
   }
 
 
 
-
     return
-    // teamArray = [];
 
-    //         teamArray.push(renderedManager)
-    
 
-    //         teamArray.push(renderedEngineer)
+        
+
   
-
-
-    //         teamArray.push(renderedIntern)
-
-        
-
-        
-    // }
     // const allCards = teamArray.join('')
     // const finalPage = contentPage(allCards)
     // return finalPage;
