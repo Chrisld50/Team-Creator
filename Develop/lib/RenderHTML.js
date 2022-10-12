@@ -1,4 +1,4 @@
-const managerCard = function (manager) {
+function  managerCard (manager) {
     return `
     <div class="card" style="width: 18rem;">
     <div class="card-body bg-primary text-white">
@@ -14,7 +14,7 @@ const managerCard = function (manager) {
     `
 }
 
-const engineerCard = function (engineer) {
+ function engineerCard (engineer) {
     return `
     <div class="card" style="width: 18rem;">
     <div class="card-body bg-primary text-white">
@@ -30,7 +30,7 @@ const engineerCard = function (engineer) {
     `
 }
 
-const internCard = function (intern){
+ function internCard (intern){
     return `
     <div class="card" style="width: 18rem;">
     <div class="card-body bg-primary text-white">
@@ -46,7 +46,7 @@ const internCard = function (intern){
     `
 }
 
-RenderHTML = (data) => {
+const RenderHTML = (data) => {
     
     teamArray = [];
 
@@ -76,8 +76,7 @@ RenderHTML = (data) => {
     const finalPage = contentPage(allCards)
     return finalPage;
 }
-
-const contentPage = function (allCards) {
+function contentPage(allCards) {
    return ` <!DOCTYPE html>
 <html lang="en">
 <head>
