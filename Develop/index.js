@@ -23,7 +23,6 @@ function init(){
         },
     ])
     .then((data) =>{
-        console.log(data)
         const {userChoice} = data
        switch (userChoice) {
         case 'Add Member':
@@ -39,7 +38,6 @@ function init(){
     .catch((error) => {console.log(error)})
 
     function _generateTeam(){
-        console.log(teamMembers)
         if(teamMembers.length < 1){
             console.log('no members in your team')
         }else{
@@ -51,9 +49,10 @@ function init(){
                 },
             ])
             .then((data) => {
-                const fileName = `${data.filename}.html`
-                fs.writeFile(fileName, RenderHTML(teamMembers), (err) =>
-                err? console.log(err) : console.log('HTML created!')) 
+                // const fileName = `${data.filename}.html`
+                // fs.writeFile(fileName, RenderHTML(teamMembers), (err) =>
+                // err? console.log(err) : console.log('HTML created!')) 
+                RenderHTML(teamMembers);
         })
       }
     }
@@ -70,7 +69,6 @@ function init(){
             },
         ])
         .then((data) =>{
-            console.log(data)
             const {members} = data
            switch (members) {
             case 'Manager':
@@ -115,11 +113,9 @@ function init(){
             }
         ])
         .then((data) => {
-            console.log(data)
             const {name, id, email, officeNumber} = data
             const manager = new Manager(name, id, email, officeNumber)
             teamMembers.push(manager)
-            console.log('team members', teamMembers)
             init()
         })
         .catch((err) => {
@@ -152,11 +148,9 @@ function init(){
             }
         ])
         .then((data) => {
-            console.log(data)
             const {name, id, email, github} = data
             const engineer = new Engineer(name, id, email, github)
             teamMembers.push(engineer)
-            console.log('team members', teamMembers)
             init()
         })
         .catch((err) => {
@@ -188,11 +182,9 @@ function init(){
             }
         ])
         .then((data) => {
-            console.log(data)
             const {name, id, email, school} = data
             const intern = new Intern(name, id, email, school)
             teamMembers.push(intern)
-            console.log('team members', teamMembers)
             init()
         })
         .catch((err) => {

@@ -47,34 +47,35 @@ function  managerCard (manager) {
 }
 
 const RenderHTML = (data) => {
-    
-    teamArray = [];
+  console.log(data)
+    return
+    // teamArray = [];
 
-    for (let i = 0; i < teamArray.length; i++) {
-        const employee = data[i]
-        const role = employee.roleAssign()
+    // for (let i = 0; i < teamArray.length; i++) {
+    //     const employee = data[i]
+    //     const role = employee.roleAssign()
 
-        if(role === 'Manager'){
-            const renderedManager = managerCard(employee)
-            teamArray.push(renderedManager)
-        }
+    //     if(role === 'Manager'){
+    //         const renderedManager = managerCard(employee)
+    //         teamArray.push(renderedManager)
+    //     }
 
-        if(role === 'Engineer'){
-            const renderedEngineer = engineerCard(employee)
-            teamArray.push(renderedEngineer)
-        }
+    //     if(role === 'Engineer'){
+    //         const renderedEngineer = engineerCard(employee)
+    //         teamArray.push(renderedEngineer)
+    //     }
 
-        if(role === 'Intern'){
-            const renderedIntern = internCard(employee)
-            teamArray.push(renderedIntern)
-        }
+    //     if(role === 'Intern'){
+    //         const renderedIntern = internCard(employee)
+    //         teamArray.push(renderedIntern)
+    //     }
         
 
         
-    }
-    const allCards = teamArray.join('')
-    const finalPage = contentPage(allCards)
-    return finalPage;
+    // }
+    // const allCards = teamArray.join('')
+    // const finalPage = contentPage(allCards)
+    // return finalPage;
 }
 function contentPage(allCards) {
    return ` <!DOCTYPE html>
