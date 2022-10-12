@@ -49,7 +49,7 @@ function init(){
                 },
             ])
             .then((data) => {
-                 const fileName = `${data.filename}.html`
+                 const fileName = `./dist/${data.filename}.html`
                  fs.writeFile(fileName, RenderHTML(teamMembers), (err) =>
                  err? console.log(err) : console.log('HTML created!')) 
         })
