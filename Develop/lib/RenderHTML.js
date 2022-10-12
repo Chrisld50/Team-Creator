@@ -60,6 +60,10 @@ const RenderHTML = (data) => {
     if(role === 'Engineer'){
       const renderedEngineer = engineerCard(employee)
     }
+
+    if (role === 'Intern'){
+      const renderedIntern = internCard(employee)
+    }
   }
 
 
@@ -74,10 +78,9 @@ const RenderHTML = (data) => {
     //         teamArray.push(renderedEngineer)
   
 
-    //     if(role === 'Intern'){
-    //         const renderedIntern = internCard(employee)
+
     //         teamArray.push(renderedIntern)
-    //     }
+
         
 
         
