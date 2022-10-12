@@ -52,7 +52,7 @@ function init(){
                 // const fileName = `${data.filename}.html`
                 // fs.writeFile(fileName, RenderHTML(teamMembers), (err) =>
                 // err? console.log(err) : console.log('HTML created!')) 
-                RenderHTML(teamMembers);
+                console.log(RenderHTML(teamMembers))
         })
       }
     }
