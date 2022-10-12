@@ -72,20 +72,11 @@ const RenderHTML = (data) => {
 
 
   const allCards = teamArray.join('')
+  const finalPage = contentPage(allCards)
 
-
-
-
-  return
-
-
-        
-
-  
-
-    // const finalPage = contentPage(allCards)
-    // return finalPage;
+  return finalPage
 }
+
 function contentPage(allCards) {
    return ` <!DOCTYPE html>
 <html lang="en">
