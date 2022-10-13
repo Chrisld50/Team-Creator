@@ -7,7 +7,7 @@ The goal of this application was to create a Team creator utilizing javascript, 
 Javascript node.js fs jest inquire HTML CSS Bootstrap
 
 # Screenshot 
-![My Image](./Images/Team-Creator%20Screenshot%201.png)
+![My Image](./Images/Team%20Creator%20Screenshot%201.png)
 
 
 ![My Image](./Images/Team-Creator%20Screenshot%202.png)
