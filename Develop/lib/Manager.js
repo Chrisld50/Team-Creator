@@ -1,6 +1,6 @@
-const Employee = require('./Employee')
+const Employee = require('./Employee') // employee is imported.
 
-class Manager extends Employee{
+class Manager extends Employee{  // this is the subclass manager and adds officeNumber to the constructor and creates the role of manager.
     constructor(name, id, email, officeNumber){
 
         super(name, id, email)

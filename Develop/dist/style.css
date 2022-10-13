@@ -1,0 +1,11 @@
+.card-role {
+    font-size: smaller;
+}
+
+.card{
+    box-shadow: 4px 4px 4px 4px rgb(54, 53, 53);
+}
+
+.team-created{
+    gap: 20px
+}

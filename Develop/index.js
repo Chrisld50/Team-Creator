@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('inquirer')  //here we call all of the npm we used, the different classes that were created like manager and the renderHTML.js
 const Manager = require('./lib/Manager')
 const Intern = require('./lib/Intern')
 const Engineer = require('./lib/Engineer')
@@ -12,7 +12,7 @@ const teamMembers = []
 init();
 
 
-function init(){
+function init(){  // This function initializes inquirer and starts the list of questions. 
     inquirer.prompt([
         {
             type: 'list',
@@ -22,7 +22,7 @@ function init(){
     
         },
     ])
-    .then((data) =>{
+    .then((data) =>{  
         const {userChoice} = data
        switch (userChoice) {
         case 'Add Member':
@@ -37,7 +37,7 @@ function init(){
     })
     .catch((error) => {console.log(error)})
 
-    function _generateTeam(){
+    function _generateTeam(){  // this function is the generateTeam function, after all members have been chosen a prompt is given to add a filename, then creates the rendered HTML with fs. 
         if(teamMembers.length < 1){
             console.log('no members in your team')
         }else{
@@ -56,14 +56,14 @@ function init(){
       }
     }
    
-    function _addMember() {
+    function _addMember() {  // this function lets us choose which member we would like to add. 
         inquirer.prompt([
           
             {
                 type: 'list',
                 name: 'members',
                 message: 'What member would you like to add to the team?',
-                choices: ['Manager', 'Engineer', 'Intern', 'I am finished'],
+                choices: ['Manager', 'Engineer', 'Intern'],
         
             },
         ])
@@ -88,7 +88,7 @@ function init(){
     }
     
     
-    function _createManager(){
+    function _createManager(){  // each function for the different employees have been created, with the list of questions then pushing each member into an array. Here the sub classes are also called. 
         inquirer.prompt([
             {
                 type: 'input',
@@ -107,7 +107,7 @@ function init(){
             },
             {
                 type: 'input',
-                name: 'OfficeNumber',
+                name: 'officeNumber',
                 message: 'What is the manager\'s office number?'
             }
         ])
