@@ -8,6 +8,7 @@ SO THAT I have quick access to their emails and GitHub profiles
 # Installation 
 * Clone repository: git clone https://github.com/Chrisld50/Team-Creator
 * All NPM packages needed for this application are already listed as dependencies in the package.json file. Run the command 'npm install' in your terminal at the root directory to install the packages. 
+* Make sure Node.js is installed on your machine.
 * to start the application type node index.js while in the terminal for the develop folder. The application will respond with prompts on how to creat your team. 
 
 # Description
